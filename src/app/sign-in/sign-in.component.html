@@ -1,0 +1,29 @@
+<h1 class="center">Log In</h1>
+<form #signform="ngForm" (ngSubmit)="Onlogin(signform)">
+    <div>
+        <label for="UserName">User Name<span [ngClass]="['text-danger']">*</span></label>
+        <input type="text" id="firstName" class="form-control" name="ftName" [(ngModel)]="sign.username"
+            #username="ngModel" minlength="4" required [pattern]="UsernamePattern"/>
+        <div *ngIf="username?.touched && username?.invalid" [ngClass]="['text-danger']">
+            <small *ngIf="username?.errors?.['required']">First name is required.</small>
+            <small *ngIf="username?.errors?.['pattern']"> First Name must only contain letters..</small>
+            <small *ngIf="username?.errors?.['minlength']">First name must be at least 4 characters long.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="password">Password<span [ngClass]="['text-danger']">*</span></label>
+        <input #passwrd="ngModel" type="text" name="password" id="" required [(ngModel)]="sign.password"
+            [pattern]="passwordPattern" minlength="6">
+        <div *ngIf="passwrd?.touched && passwrd?.invalid" [ngClass]="['text-danger']">
+            <small *ngIf="passwrd?.errors?.['required']">Password required.</small>
+            <small *ngIf="passwrd?.errors?.['pattern']"> Must contain one letter, one number and a special character</small>
+            <small *ngIf="passwrd?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button type="submit" >Log In</button>
+        <p>Create new account <a href="#" (click)="movesign($event)">Sign in here</a></p>
+    </div>
+</form>

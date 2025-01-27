@@ -1,0 +1,16 @@
+
+th,td,tr{
+    border-spacing: 100px;
+    border:1px solid black;
+}
+table{
+    border: 3px solid black;
+    margin: auto;
+    border-radius: 10px;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+td,th{
+    border: none;
+}

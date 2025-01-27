@@ -1,0 +1,75 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 39px;
+    color:purple;
+}
+  .slider-container {
+    position: relative;
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .prev-btn, .next-btn {
+    background-color: rgba(131, 10, 107, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;  
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 40px;
+  }
+  
+  .prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }  
+    .image-index {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color:black;
+      font-size: 18px;
+    }
+   
+.gallery{
+  text-align: center;
+  margin: 10px 10px;
+  color: purple;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gobuy{
+  width: 200px;
+  height:70px;
+  background-color:violet;
+
+  }
+button:hover{
+  background-color:hotpink;
+}

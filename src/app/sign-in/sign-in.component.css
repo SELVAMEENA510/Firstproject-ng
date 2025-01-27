@@ -1,0 +1,29 @@
+form{
+background-color:beige;
+border: 1px solid black;
+margin: auto;
+padding:30px;
+box-shadow: 20px;
+width: 500px;
+}
+.center{
+text-align: center;
+}
+label{
+font-weight: bold;
+margin: 10px 0 5px;
+display: block;
+}
+input,button{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 3px;
+    width: 400px;
+    
+}
+button{
+     margin: 10px 0px 10px;
+    cursor: pointer;
+   width: 120px;
+
+}

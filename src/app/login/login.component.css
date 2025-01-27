@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    form {
+        max-width: 500px;
+        /* display: flex; */
+    
+        margin:auto;
+        padding: 20px;
+        background:ivory;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px grey;
+    }
+    label {
+        font-weight: bold;
+        /* display: block; */
+        margin: 10px 0 5px;
+    }
+    input, button {
+        /* width: 100%; */
+        padding: 5px;
+        /* display: flex;
+        align-items: right; */
+        /* margin: 5px 0 20px; */
+        border: 1px solid black;
+        border-radius: 15px;
+        
+    }
+    button {
+        /* background-color:lightcoral; */
+        /* color: white;     */
+        border:0cap; 
+        cursor: pointer;
+        padding:10px;
+        width: 120px;
+    }
+    .sign{
+        text-decoration: none;
+        text-align: right;
+        width: 450px;
+       }
+    
+    

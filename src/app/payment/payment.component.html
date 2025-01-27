@@ -1,0 +1,59 @@
+<div class="align">
+    <h2>Payment</h2>
+</div>
+<div class="box">
+    <form #payform="ngForm" (ngSubmit)="order(payform)" noValidate>
+
+        <div>
+            <h4>Payment</h4>
+            <label class="label"> Payment Method <span style="color: red;">*</span></label>
+            <select class="textbox" [(ngModel)]="payment.method" name="paymentMethod" #method="ngModel" required>
+                <option value="" disabled>Payment method</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="netBanking">Net Banking</option>
+                <option value="netBanking">Net Banking</option>
+                <option value="cash">Cash on delivery</option>
+            </select>
+            <div *ngIf="method?.touched && method?.invalid" [ngClass]="['text-danger']">
+                <small *ngIf="method?.errors?.['required']">Payment Method is required.</small>
+            </div>
+        </div><br>
+        <div>
+            <h4>Address Detail</h4>
+            <label class="label">Building <span style="color: red;">*</span></label>
+            <input #build="ngModel" type="text" name="build" id="Building" class="textbox" required
+                (keypress)="onlyNumbers($event)" [(ngModel)]="payment.build">
+            <div *ngIf="build?.touched && build?.invalid" [ngClass]="['text-danger']">
+                <small *ngIf="build?.errors?.['required']">Building Number required.</small>
+            </div>
+        </div>
+        <div>
+            <label class="label">Street<span style="color: red;">*</span></label>
+            <input #street="ngModel" name="street" type="text" class="textbox" (keypress)="onlyLetters($event)"
+                [(ngModel)]="payment.street" required>
+            <div *ngIf="street?.touched && street?.invalid" [ngClass]="['text-danger']">
+                <small *ngIf="street?.errors?.['required']">Street Name required.</small>
+            </div>
+        </div>
+        <div>
+            <label class="label">City<span style="color: red;">*</span></label>
+            <input #city="ngModel" name="city" type="text" class="textbox" required (keypress)="onlyLetters($event)"
+                [(ngModel)]="payment.city">
+            <div *ngIf="city?.touched && city?.invalid" [ngClass]="['text-danger']">
+                <small *ngIf="city?.errors?.['required']">City Name required.</small>
+            </div>
+        </div>
+        <div>
+            <label for="phone" class="label">Phone Number<span [ngClass]="['text-danger']">*</span></label>
+            <input type="tel" id="phone" class="textbox" name="phone" [(ngModel)]="payment.phne" #phne="ngModel"
+                [pattern]="phonePattern" required minlength="10" maxlength="10" (keypress)="onlyNumbers($event)" />
+            <div *ngIf="phne?.touched && phne?.invalid" [ngClass]="['text-danger']">
+                <small *ngIf="phne?.errors?.['required']">Phone Number is required.</small>
+                <small *ngIf="phne?.errors?.['pattern']">Contains only numbers.</small>
+                <small *ngIf="phne?.errors?.['minlength']">Must contain 10 numbers.</small>
+                <small *ngIf="phne?.errors?.['maxlength']">Must contain 10 numbers.</small>
+            </div>
+            <button class="btn" onclick="order(FormData)" [disabled]="payform.invalid">Place Order</button>
+        </div>
+    </form>

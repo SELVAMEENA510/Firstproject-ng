@@ -1,0 +1,15 @@
+.abt{
+    display: flex;
+    justify-content: center;
+    font-size: 39px;
+    color:deeppink;
+}
+.story{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px
+}
+.abt1{
+    
+ text-align: center;
+    color: deeppink;
+}

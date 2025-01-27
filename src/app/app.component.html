@@ -1,0 +1,42 @@
+<!-- <app-home></app-home>
+<app-login></app-login>
+<app-about></app-about> -->
+<div>
+  <header>
+    <ul>
+      <li><a [routerLink]="['']">Home</a></li>
+      <li><a [routerLink]="['profile']">Profile</a></li>
+      <li><a [routerLink]="['login']">Sign In</a></li>
+      <li><a [routerLink]="['cart']"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmkAT6IJ7eZlJx0X70xkwOZ7DHhpJ4XHzJRw&s" width="40px" alt=""></a></li>
+    
+    </ul>
+  </header>
+  <router-outlet></router-outlet>
+</div>
+<div>
+  <footer class=""> 
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo" style="text-align: center;">
+          <h2>Cake Shop</h2>
+          <p>Delicious cakes made with love!</p>
+        </div>
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/cart">Cart</a></li>
+          </ul>
+        </div>
+
+       
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cake Shop. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </footer>
+</div>

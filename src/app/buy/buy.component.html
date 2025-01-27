@@ -1,0 +1,9 @@
+<div class="buy"><h2>Buy Product</h2>
+  <div *ngFor="let product of products">
+      <div class="product">
+        <img [src]="product.imageUrl" alt="{{ product.name }}" />
+        <h4><i>{{ product.name }}</i></h4>
+        <h6>Price:Rs {{ product.price }}</h6>
+         <button (click)="BuyProduct()" >Buy</button><br>
+        <button [disabled]="isDisabled(product.id)" (click)="addcart(product)"  >{{ isDisabled(product.id) ? 'Added to Cart' : 'Add to Cart' }}</button>
+      </div> </div>
